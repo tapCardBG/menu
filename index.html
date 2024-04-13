@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Меню</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -38,6 +38,8 @@
             margin-bottom: 30px;
         }
         .product {
+            display: flex;
+            align-items: center;
             padding: 20px;
             border-bottom: 1px solid #eee;
             cursor: pointer;
@@ -68,6 +70,13 @@
             font-size: 1.2rem;
             color: #cc4e4e;
             font-weight: bold;
+        }
+        .product img {
+            margin-left: 20px; /* Adjusted margin */
+            border-radius: 5px;
+        }
+        .product-content {
+            flex: 1; /* Take remaining space */
         }
         .modal {
             display: none;
@@ -110,33 +119,43 @@
         <h1>Costa Coffee</h1>
         
         <div class="section">
-            <h2>Coffee</h2>
-            <div class="product" onclick="openModal('Espresso', 'A strong black coffee made by forcing steam through ground coffee beans.', '3 LEV')">
-                <h3>Espresso</h3>
-                <p class="description">A strong black coffee made by forcing steam through ground coffee beans.</p>
-                <p class="price">3 LEV</p>
+            <h2>Топли Напитки</h2>
+            <div class="product" onclick="openModal('Лате Ванилия и Лешник', 'Деликатно лате с нотки ванилия и ядков вкус, завършена с тъмен шоколад.', '5,40 лв')">
+                <div class="product-content">
+                    <h3>Лате Ванилия и Лешник</h3>
+                    <p class="description">Деликатно лате с нотки ванилия и ядков вкус, завършена с тъмен шоколад.</p>
+                    <p class="price">5,40 лв</p>
+                </div>
+                <img src="https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_120,w_120/f_auto/q_auto/dpr_1.0/v1712898939/static-takeaway-com/images/restaurants/bg/03N7175N/products/hazelnut-vanilla-latte" alt="Avocado Toast" width="100" height="100">
             </div>
-            <!-- Add more coffee options here -->
+            <div class="product" onclick="openModal('Зеленчукови Кюфтета', 'Кюфтета, приготвени от смес от настъргани зеленчуци и подправки.', '7 LEV')">
+                <div class="product-content">
+                    <h3>Испански Флет Уайт</h3>
+                    <p class="description">Primo (350ml) Кадифена, млечна кафе напитка с бял шоколад.</p>
+                    <p class="price">7,40 лв</p>
+                </div>
+                <img src="https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_120,w_120/f_auto/q_auto/dpr_1.0/v1712898939/static-takeaway-com/images/restaurants/bg/03N7175N/products/spanish-flat-white" alt="Vegetable Fritters" width="100" height="100">
+            </div>
         </div>
         
         <div class="section">
-            <h2>Tea</h2>
-            <div class="product" onclick="openModal('Green Tea', 'A type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.', '4 LEV')">
-                <h3>Green Tea</h3>
-                <p class="description">A type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas.</p>
-                <p class="price">4 LEV</p>
+            <h2>Десерти</h2>
+            <div class="product" onclick="openModal('Еспресо', 'Силно черно кафе, приготвено чрез подпарвяне на пара през смляно кафе.', '3 LEV')">
+                <div class="product-content">
+                    <h3>Испанско чучо</h3>
+                    <p class="description">Испански десерт с деликатен ванилов крем и захарна поръска.</p>
+                    <p class="price">3,20 лв</p>
+                </div>
+                <img src="https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_120,w_120/f_auto/q_auto/dpr_1.0/v1712898939/static-takeaway-com/images/restaurants/bg/0QR7QP5N/products/ispansko_chuchopng" alt="Espresso" width="100" height="100">
             </div>
-            <!-- Add more tea options here -->
-        </div>
-
-        <div class="section">
-            <h2>Pastries</h2>
-            <div class="product" onclick="openModal('Croissant', 'A buttery, flaky, viennoiserie pastry of Austrian origin, named for its historical crescent shape.', '5 LEV')">
-                <h3>Croissant</h3>
-                <p class="description">A buttery, flaky, viennoiserie pastry of Austrian origin, named for its historical crescent shape.</p>
-                <p class="price">5 LEV</p>
+            <div class="product" onclick="openModal('Капучино', 'Еспресо със студено мляко и мека пяна от мляко.', '5 LEV')">
+                <div class="product-content">
+                    <h3>Ягодов чийзкейк</h3>
+                    <p class="description">Нашият емблематичен чийзкейк, богато декориран с ягодови половинки.</p>
+                    <p class="price">7,30 лв</p>
+                </div>
+                <img src="https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_120,w_120/f_auto/q_auto/dpr_1.0/v1712898939/static-takeaway-com/images/restaurants/bg/0QR7QP5N/products/costa_strawberry_cheesecakepng" alt="Cappuccino" width="100" height="100">
             </div>
-            <!-- Add more pastry options here -->
         </div>
         
     </div>
